@@ -36,20 +36,7 @@ export function ThreeDCardDemo({ items }: CardProps) {
             >
               {item.description}
             </CardItem>
-            {/* <CardItem
-              translateZ="100"
-              rotateX={20}
-              rotateZ={-10}
-              className="w-full mt-4"
-            >
-              <Image
-                src="/warsaw.jpg"
-                height="1000"
-                width="1000"
-                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                alt="thumbnail"
-              />
-            </CardItem> */}
+            
           </CardBody>
         </CardContainer>
       ))}
