@@ -2,10 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { NextIntlClientProvider } from 'next-intl'
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server'
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,22 +27,25 @@ interface RootLayoutProps {
     locale: string;
   };
 }
-
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
 }
 
-
 export default async function RootLayout({
   children,
-  params: { locale }
+  params: { locale },
 }: Readonly<RootLayoutProps>) {
+  console.log("Current Locale:", locale); // Check what locale is detected
   unstable_setRequestLocale(locale);
-  const messages = await getMessages()
+  console.log("Current Locale2:", locale); // Check what locale is detected
+
+  const messages = await getMessages();
 
   return (
     <html lang={locale}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider
             attribute="class"
@@ -51,12 +53,10 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-
             {children}
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
-
   );
 }
