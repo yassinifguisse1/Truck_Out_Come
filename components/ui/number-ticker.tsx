@@ -11,12 +11,14 @@ export default function NumberTicker({
   delay = 0,
   className,
   decimalPlaces = 0,
+  isHighlighted = true
 }: {
   value: number;
   direction?: "up" | "down";
   className?: string;
   delay?: number; // delay in s
   decimalPlaces?: number;
+  isHighlighted?: boolean;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
   const motionValue = useMotionValue(direction === "down" ? value : 0);
@@ -49,8 +51,9 @@ export default function NumberTicker({
   return (
     <span
       className={cn(
-        "inline-block tabular-nums text-black dark:text-white tracking-wider",
+        "inline-block tabular-nums text-black  tracking-wider",
         className,
+        isHighlighted ? "text-white" : "text-black",
       )}
       ref={ref}
     />

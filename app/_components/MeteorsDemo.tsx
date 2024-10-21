@@ -1,7 +1,7 @@
 import { Meteors } from "@/components/ui/meteors";
 import React from "react";
 interface CardProps {
-    items: {
+  items: {
     icon?: React.ReactNode;
     title: string;
     description: string;
@@ -13,7 +13,7 @@ export function MeteorsDemo({ items }: CardProps) {
     <div className="flex flex-col md:flex-row container mx-auto gap-8 z-0">
       {items.map((item, idx) => (
         <div className=" w-full relative " key={idx}>
-          <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-violet-500  to-violet-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
+          <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-violet-500  to-violet-500 transform scale-[0.80]  rounded-full blur-3xl" />
           <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
             <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
               <svg
@@ -37,7 +37,6 @@ export function MeteorsDemo({ items }: CardProps) {
             </h1>
 
             <p className="font-mono font-normal text-base text-slate-500 mb-4 relative z-0">
-             
               {item.description}
             </p>
 
@@ -46,7 +45,6 @@ export function MeteorsDemo({ items }: CardProps) {
           </div>
         </div>
       ))}
-      
     </div>
   );
 }
