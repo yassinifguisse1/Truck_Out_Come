@@ -4,13 +4,16 @@ import React from 'react'
 import { Check } from 'lucide-react';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
 import UnderHero from './UnderHero';
+import { NumberTickerDemo } from './NumberTickerDemo';
 
 
 const CardHoverEffect = () => {
   return (
-    <div className=" md:px-8 -mt-[106px] lg:-mt-[90px] rounded-b-5xl container mx-auto w-full">
+    <div className=" md:px-8 -mt-[106px] lg:-mt-[90px] rounded-b-5xl container mx-auto w-full z-20">
       <HoverEffect items={projects} />
+      <NumberTickerDemo />
       <UnderHero />
+     
     </div>
   );
 }

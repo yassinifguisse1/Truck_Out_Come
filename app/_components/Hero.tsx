@@ -24,6 +24,7 @@ const Hero = () => {
          
         </h1>
          <Button className="mt-8 md:p-6 md:text-xl">{btncontent}</Button>
+         
       </div>
    </div>
   )

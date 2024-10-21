@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, unstable_setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Navbar from "../_components/Navbar";
+import Footer from "../_components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -56,6 +57,7 @@ export default async function RootLayout({
           >
             <Navbar />
             {children}
+            <Footer/>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

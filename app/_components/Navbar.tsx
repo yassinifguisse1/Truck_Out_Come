@@ -10,8 +10,9 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
+import Logo from "./Logo";
 
-// type Theme = "light" | "dark";
+
 
 type NavbarItemType = {
   labe: string;
@@ -21,14 +22,12 @@ type NavbarItemType = {
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  // const [theme, setTheme] = useState<Theme>("light");
   const [darkTheme, setDarkTheme] = useState(true);
 
   const t = useTranslations("Navbar");
 
   useEffect(() => {
-    // const savedTheme = localStorage.getItem("theme") as Theme;
-    // if (savedTheme) setTheme(savedTheme);
+    
 
 
     const theme = localStorage.getItem('theme');
@@ -40,8 +39,6 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    // localStorage.setItem("theme", theme);
-    // document.documentElement.classList.toggle("dark", theme === "dark");
 
     if (darkTheme) {
 			document.documentElement.classList.add('dark');
@@ -52,8 +49,7 @@ export default function Navbar() {
 		}
   }, [darkTheme]);
 
-  // const toggleTheme = () =>
-  //   setTheme((prev) => (prev === "light" ? "dark" : "light"));
+ 
   const toggleTheme = () =>
     setDarkTheme(!darkTheme)
 
@@ -63,28 +59,15 @@ export default function Navbar() {
     { label: t("contactUs"), link: "/contact" },
   ];
  
-  // bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-transparent ">
       <nav className="container flex h-20  border-2 items-center justify-between mt-3 gap-6 rounded-lg font-mono bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <Link href="/" className="flex items-center space-x-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="h-6 w-6"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-            <line x1="9" y1="9" x2="9.01" y2="9" />
-            <line x1="15" y1="9" x2="15.01" y2="9" />
-          </svg>
-          <span className="font-bold">Your Logo</span>
-        </Link>
+        <div>
+          <Link href="/">
+            <Logo />
+          </Link>
+        </div>
+
         <div className="hidden md:flex md:items-center md:space-x-4 ">
           {/* <NavItems /> */}
           {items.map((item) => (
