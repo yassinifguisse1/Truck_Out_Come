@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Vortex } from "@/components/ui/vortex";
+import { Link } from "@/i18n/routing";
 
 export function VortexDemo() {
   return (
@@ -18,7 +19,9 @@ export function VortexDemo() {
         <h3 className="text-white font-mono text-sm md:text-2xl max-w-xl mt-6 text-center font-semibold ">
           Get Your Free Marketing Consultation Today
         </h3>
-        <Button className="text-lg font-mono mt-10">YES, I WANT THAT!</Button>
+        <Link href="/contact">
+          <Button className="text-lg font-mono mt-10">YES, I WANT THAT!</Button>
+        </Link>
       </Vortex>
     </div>
   );

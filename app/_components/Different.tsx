@@ -13,11 +13,9 @@ const cards =[
 const Different = () => {
   return (
     <section className="py-10 flex flex-col items-center container mx-auto w-full">
-        <h2 className="text-3xl font-bold font-mono mb-8 text-center">
-          <LetterPullup words={"OK... But What Makes Us Different?"} delay={0.05} />
+        <h2 className="text-3xl font-bold font-mono mb-8 text-center text-black">
+        OK... But What Makes Us Different?
         </h2>
-
-       
         <div>
           <MeteorsDemo items={cards}/>
         </div> 

@@ -1,8 +1,8 @@
 "use client"
-
 import React from 'react'
-import { ArrowUpRight, Check } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import UnderHero from './UnderHero';
+
 import { NumberTickerDemo } from './NumberTickerDemo';
 
 
@@ -12,7 +12,7 @@ const StatCard = ({
   subtext = "",
   isHighlighted = false,
 }: {
-  number: number;
+  number: string;
   text: string;
   subtext?: string;
   isHighlighted?: boolean;
@@ -26,8 +26,10 @@ const StatCard = ({
   >
     <div className="flex justify-between items-start  ">
       <div>
-        <h3 className="text-4xl font-bold mb-2 dark:text-black">
-          <NumberTickerDemo number={number} isHighlighted={isHighlighted}/>{" "}
+        <h3 className="text-4xl font-bold mb-2 ">
+        
+            {number}
+       
         </h3>
         <p className="text-lg font-medium font-mono ">{text}</p>
         {subtext && (
@@ -47,29 +49,10 @@ const StatCard = ({
   </div>
 );
 const CardHoverEffect = () => {
+
   return (
-    <div className=" md:px-8 -mt-[106px] lg:-mt-[90px] rounded-b-5xl container mx-auto w-full ">
-      {/* <HoverEffect items={projects} /> */}
-      <div className="bg-vio-900 bg-gray-900 border border-gray-800 p-6 rounded-3xl relative w-full z-40">
-      {/* flex flex-col md:flex-row   border  gap-4 */}
-      <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-violet-500  to-violet-500 transform scale-[0.80]  rounded-full blur-3xl" />
-
-      <div className="relative grid grid-cols-1 md:grid-cols-5 gap-4  ">
-        <StatCard 
-          number= {150}
-          text="Satisfied clients" 
-          subtext="Our awesome clients are industry experts around the world" 
-          isHighlighted={true} 
-        />
-        <StatCard number={2} text="Years Experience" />
-        <StatCard number={20} text="Professional Designer" />
-        <StatCard number={10} text="Digital Product" />
-        
-      </div>
-      
-
-    </div>
-      {/* <NumberTickerDemo /> */}
+    <div className=" md:px-8  rounded-b-5xl container mx-auto w-full ">
+    
       <UnderHero />
     </div>
   );
@@ -78,30 +61,3 @@ const CardHoverEffect = () => {
 export default CardHoverEffect
 
 
-
-export const projects = [
-  {
-    icon:  <Check className="h-6 w-6" />,
-    description:
-      "Design",
-
-  },
-  {
-    icon:  <Check className="h-6 w-6" />,
-    description:
-      "Devlopments",
-
-  },
-  {
-    icon:  <Check className="h-6 w-6" />,
-    description:
-      "Markiting",
-
-  },
-  {
-    icon:  <Check className="h-6 w-6" />,
-    description:
-      "Strategy",
-
-  }
-];
