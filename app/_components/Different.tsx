@@ -2,7 +2,6 @@
 import React from 'react'
 
 import { MeteorsDemo } from './MeteorsDemo'
-import LetterPullup from '@/components/ui/letter-pullup'
 
 const cards =[
   { title : "We Win When You Win" , description : "Think of us as your dedicated and innovative marketing partner, not just another vendor. We take your success personally and strive for lasting results."},
@@ -13,7 +12,7 @@ const cards =[
 const Different = () => {
   return (
     <section className="py-10 flex flex-col items-center container mx-auto w-full">
-        <h2 className="text-3xl font-bold font-mono mb-8 text-center text-black">
+        <h2 className="text-3xl font-bold font-mono mb-8 text-center dark:text-gray-300 text-black">
         OK... But What Makes Us Different?
         </h2>
         <div>

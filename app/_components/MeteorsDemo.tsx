@@ -14,7 +14,7 @@ export function MeteorsDemo({ items }: CardProps) {
       {items.map((item, idx) => (
         <div className=" w-full relative " key={idx}>
           <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-violet-500  to-violet-500 transform scale-[0.80]  rounded-full blur-3xl" />
-          <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+          <div className="relative shadow-xl bg-gray-100 dark:bg-darkPurple border border-violet-950  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
             <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +32,9 @@ export function MeteorsDemo({ items }: CardProps) {
               </svg>
             </div>
 
-            <h1 className="font-mono flex items-center font-bold text-xl text-white mb-4 relative z-2">
-              <span>{item.icon}</span> {item.title}
+            <h1 className="font-mono flex items-center font-bold text-xl text-purple-950 dark:text-white mb-4 relative z-2">
+              <span>{item.icon}</span> 
+              {item.title}
             </h1>
 
             <p className="font-mono font-normal text-base text-slate-500 mb-4 relative z-0">

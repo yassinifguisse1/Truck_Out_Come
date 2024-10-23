@@ -5,13 +5,13 @@ import Image from "next/image";
 
 const Logo = () => {
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center justify-center space-x-2">
       {/* <Link href="/" className="flex items-center space-x-2"> */}
-        <Rocket className="h-6 w-6 text-violet-600" />
+        <Rocket className="h-8 w-8 text-violet-600" />
         <span className="text-lg font-semibold">
           Track{" "}
           <span className="text-violet-600  ">
-            <br className=" hidden md:inline-block md:pl-6 border " /> |OutCome
+             |OutCome
           </span>
         </span>
         {/* <Image 
