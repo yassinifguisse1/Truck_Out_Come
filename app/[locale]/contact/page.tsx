@@ -58,7 +58,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 bg-[#050816]">
+    <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 bg-[#050816] relative">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mt-10 container mx-auto">
 
         {/* Form  */}
@@ -76,11 +76,11 @@ export default function ContactPage() {
             <h2 className="text-3xl font-bold text-center font-mono mb-8">
               Receive a free marketing Analysis
             </h2>
-            <h2 className="text-xl text-center font-mono pb-8">
+            <h2 className="text-md md:text-lg text-center font-mono pb-8">
               Fill out the form below and we contact you within 48 hours for a
               free analysis.
             </h2>
-            <p className="text-md text-center font-mono  pb-8">
+            <p className="text-sm md:text-md text-muted-foreground text-center font-mono  pb-8">
               No cost , No obligation , No annoying sales pitch.Guaranteed.
             </p>
             <Form {...form}>
@@ -194,10 +194,11 @@ export default function ContactPage() {
         </motion.div>
 
         {/* Stars */}
-        <div>
+        
+      </div>
+      <div className="absolute inset-0 w-full h-full">
           <StarsCanvas />
         </div>
-      </div>
       <ToastContainer />
     </div>
   );
