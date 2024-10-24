@@ -31,7 +31,7 @@ export default function Navbar() {
 
 
     const theme = localStorage.getItem('theme');
-		if (theme === 'dark') {
+		if (theme === 'light') {
 			setDarkTheme(true);
 		} else {
 			setDarkTheme(false);

@@ -5,11 +5,25 @@
        "contactUs": "Kontakt"
   },
   "Hero": {
-    "firstLine": "Zdobądź więcej klientów, więcej wzrostu.",
-    "secondLine": "Gwarantowane.",
+    "firstLine": "Zdobądź więcej klientów, więcej wzrostu Gwarantowane.",
     "button": "TAK, CHCĘ TO!"
-  }
-  ,
+  },
+  "UnderHero":{
+    "firstLine": "Marketing jest kluczowy... Ale rozumiem, jesteś zajęty.",
+    "secondLine": "Masz firmę do prowadzenia, pracowników do zarządzania, klientów do obsługi. Twoja lista zadań jest bardzo długa, a marketing zawsze zostaje przesunięty na moment, kiedy znajdzie się na to czas.",
+    "thirdLine": "Musisz sprawić, by Twój marketing działał dla Ciebie.",
+    "lastLine":"Ale jak?"
+  },
+  "FirstCards": {
+    "title_1": "Zrób to sam?",
+    "content_1": "Nie wiem, co napisać, więc po prostu wkleję tutaj coś fajnego. Jeszcze jedno zdanie, bo lorem ipsum jest po prostu nie do przyjęcia. Nie będę z tego robić ChatGPT na siłę.",
+    
+    "title_2": "Zatrudnić kogoś?",
+    "content_2": "Znalezienie odpowiedniej osoby to jak szukanie igły w stogu siana. A nawet jeśli ją znajdziesz, szkolenie jej zajmuje czas i nie jest tanie. To raczej trudny proces.",
+  
+    "title_3": "Współpraca z agencją?",
+    "content_3": "Jeśli nie masz dużego budżetu, twoje konto prawdopodobnie trafi w ręce kogoś niedoświadczonego. To frustrujące i ryzykowne, a zasługujesz na lepsze."
+},
   "HomePage": {
     "title": "cadsjh!",
     "about": "Guxucbbbb"

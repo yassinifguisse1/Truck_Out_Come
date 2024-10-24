@@ -1,13 +1,10 @@
 import React from "react";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 
 const Hero = () => {
   const t = useTranslations("Hero");
 
   const firstLine = t("firstLine");
-  const secondLine = t("secondLine");
   const btncontent = t("button");
  
   return (

@@ -10,6 +10,7 @@ interface CardProps {
 }
 // bg-violet-400
 export function MeteorsDemo({ items }: CardProps) {
+  
   return (
     <div className="flex flex-col md:flex-row container mx-auto gap-8 z-0">
       {items.map((item, idx) => (

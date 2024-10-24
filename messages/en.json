@@ -5,9 +5,25 @@
     "contactUs": "Contact Us"
   },
   "Hero":{
-    "firstLine": "Unlock More Clients, More Growth.",
-    "secondLine": "Guaranteed.",
-    "button":"YES, I WANT THAT!"
+    "firstLine": "Unlock More Clients, More Growth Guaranteed.",
+    "button":"Let's Get Started"
+  },
+  "UnderHero":{
+    "firstLine": "Marketing is Crucial... But I Get It, You're Busy.",
+    "secondLine": "You've got a business to run, staff to manage, customers to take care of. Your to-do list is a mile long, and somehow, marketing always gets pushed to when there's time.",
+    "thirdLine": "You Need to Make Your Marketing Work for You.",
+    "lastLine":"But How?"
+  },
+  "FirstCards":{
+    "title_1": "Do it Yourself?",
+    "content_1": "I don't know what to write so I'll just paste something cool here. One more sentence because lorem ipsum is just unacceptable. Won't ChatGPT the shit out of this.",
+   
+    "title_2": "Hire Someone?",
+    "content_2": "Finding the right person is like finding a needle in a haystack. And even if you do, training them takes time and it isn't cheap. and it's rather a hard process.",
+   
+    "title_3": "Bring in an Agency?",
+    "content_3": "Unless you've got a big budget, your account will probably end up in the hands of someone inexperienced. It's frustrating and risky, and you deserve better."
+    
   },
   "HomePage": {
     "title": "Hello world!",
