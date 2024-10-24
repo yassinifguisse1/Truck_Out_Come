@@ -29,6 +29,7 @@ import {
 } from "@/components/ui/form";
 import EarthCanvas from "@/app/_components/canvas/EarthCanvas";
 import StarsCanvas from "@/app/_components/canvas/StarsCanvas";
+import ContactInfo from "@/app/_components/contact/ContactInfo";
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
 
@@ -83,6 +84,7 @@ export default function ContactPage() {
             <p className="text-sm md:text-md text-muted-foreground text-center font-mono  pb-8">
               No cost , No obligation , No annoying sales pitch.Guaranteed.
             </p>
+            <ContactInfo/>
             <Form {...form}>
               <form
                 className="space-y-6"

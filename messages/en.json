@@ -56,7 +56,16 @@
     "title_3": "Focused on What Matters",
     "content_3": "We’re experienced, trusted specialists. By working with industries we deeply understand, we confidently promise real, measurable, and sustainable results."
   },
-
+  "VortexDemo":{
+    "firstLine": "Let's Solve This Together.",
+    "secondLine": "Ready for marketing that works like a knife through butter?",
+    "thirdLine": "Get Your Free Marketing Consultation Today",
+    "button": "YES, I WANT THAT!"
+  },
+  "Footer":{
+    "contactUs" : "contact",
+    "lastLine":" All Rights Reserved."
+  },
   "HomePage": {
     "title": "Hello world!",
     "about": "Go to the about page"

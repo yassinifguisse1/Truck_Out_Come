@@ -6,6 +6,7 @@ import { CanvasRevealEffect } from "@/components/ui/canvas-reveal-effect";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export function CanvasRevealEffectDemo() {
   const t = useTranslations("Hero");
@@ -66,9 +67,13 @@ const Card = ({
             className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-violet-500 to-pink-500"
           />
         </h2>
-        <Button className="mt-16 md:p-6 md:text-xl flex items-center justify-center mx-auto dark:bg-white bg-purple-950">
-          {button}
-        </Button>
+
+        <Link href="/contact">
+          <Button className="mt-16 md:p-6 md:text-xl flex items-center justify-center mx-auto dark:bg-white bg-purple-950">
+            {button}
+          </Button>
+
+        </Link>
       </div>
     </div>
   );
@@ -76,18 +81,3 @@ const Card = ({
 
 
 
-export const Icon = ({ className, ...rest }: any) => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      stroke="currentColor"
-      className={className}
-      {...rest}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-    </svg>
-  );
-};

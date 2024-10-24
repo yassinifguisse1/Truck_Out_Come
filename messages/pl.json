@@ -52,8 +52,17 @@
   "title_3": "Skupieni na Tym, Co Ważne",
   "content_3": "Jesteśmy doświadczonymi, zaufanymi specjalistami. Współpracując z branżami, które dobrze rozumiemy, możemy pewnie obiecać realne, mierzalne i trwałe wyniki."
 },
+"VortexDemo": {
+  "firstLine": "Rozwiążmy to Razem.",
+  "secondLine": "Gotowy na marketing, który działa jak nóż przez masło?",
+  "thirdLine": "Zdobądź Dziś Darmową Konsultację Marketingową",
+  "button": "TAK, CHCĘ TO!"
+},
 
-
+"Footer": {
+  "contactUs": "Kontakt",
+  "lastLine": "Wszelkie Prawa Zastrzeżone."
+},
   "HomePage": {
     "title": "cadsjh!",
     "about": "Guxucbbbb"
