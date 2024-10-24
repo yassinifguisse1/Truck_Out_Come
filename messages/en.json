@@ -25,6 +25,11 @@
     "content_3": "Unless you've got a big budget, your account will probably end up in the hands of someone inexperienced. It's frustrating and risky, and you deserve better."
     
   },
+  "Solution":{
+    "firstLine": "Here's What ",
+    "secondLine": "We Can Do for You:"
+    
+  },
   "HomePage": {
     "title": "Hello world!",
     "about": "Go to the about page"

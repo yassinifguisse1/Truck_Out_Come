@@ -2,11 +2,7 @@ import React from "react";
 import { MeteorsDemo } from "../../app/_components/MeteorsDemo";
 import { useTranslations } from "next-intl";
 
-// const cards =[
-//     {title : "Do it Yourself?" , description : "I don't know what to write so I'll just paste something cool here. One more sentence because lorem ipsum is just unacceptable. Won't ChatGPT the shit out of this."},
-//     {title : "Hire Someone?" , description :"Finding the right person is like finding a needle in a haystack. And even if you do, training them takes time and it isn't cheap. and it's rather a hard process."},
-//     {title : "Bring in an Agency?" , description : "Unless you've got a big budget, your account will probably end up in the hands of someone inexperienced. It's frustrating and risky, and you deserve better."}
-// ]
+
 const UnderHero = () => {
   const tUnderHero = useTranslations("UnderHero");
   const tFirstCards = useTranslations("FirstCards");

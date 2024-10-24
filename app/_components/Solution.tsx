@@ -2,8 +2,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "@/components/ui/lamp";
+import { useTranslations } from "next-intl";
 
 const Solution = () => {
+  const t = useTranslations("Solution");
+
+  const firstLine = t("firstLine")
+  const secondLine = t("secondLine")
+
   return (
     <LampContainer>
      
@@ -17,7 +23,8 @@ const Solution = () => {
           }}
           className=" bg-gradient-to-br dark:text-gray-300  from-purple-600 to-purple-950 py-4 bg-clip-text text-center text-4xl font-mono font-bold tracking-tight text-transparent md:text-7xl"
         >
-          Here&apos;s What <br /> We Can Do for You:
+          {firstLine} <br /> {secondLine}
+          
         </motion.h1>
     </LampContainer>
   );
