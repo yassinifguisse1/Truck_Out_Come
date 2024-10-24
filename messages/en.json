@@ -30,6 +30,33 @@
     "secondLine": "We Can Do for You:"
     
   },
+  "Test":{
+
+    "title_1": "Premium Ads, Websites & Designs",
+    "content_1": "We deliver ads, websites, and designs that actually convert.",
+   
+    "title_2": "Managed Ad Campaigns",
+    "content_2": "We manage your Google, Instagram, and Facebook Ads so they bring you qualified leads, not just impressions.",
+   
+    "title_3": "Top Quality, Affordable Prices",
+    "content_3": "All of this at top quality, affordable prices, because effective marketing shouldn't break the bank."
+    
+
+  },
+  "HeaderOfDeffrent":{
+    "header":"OK... But What Makes Us Different?"
+  },
+  "DeffrentCards":{
+    "title_1": "We Win When You Win",
+    "content_1": "Think of us as your dedicated and innovative marketing partner, not just another vendor. We take your success personally and strive for lasting results.",
+    
+    "title_2": "We're Here in Poland, Ready to Help",
+    "content_2": "Not a call center. Not outsourced. We're real, local, and ready to sit down and discuss your needs face-to-face if that's what you want.",
+   
+    "title_3": "Focused on What Matters",
+    "content_3": "We’re experienced, trusted specialists. By working with industries we deeply understand, we confidently promise real, measurable, and sustainable results."
+  },
+
   "HomePage": {
     "title": "Hello world!",
     "about": "Go to the about page"

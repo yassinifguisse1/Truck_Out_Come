@@ -28,6 +28,32 @@
   "firstLine": "Oto, co możemy",
   "secondLine": "dla Ciebie zrobić:"
 },
+
+"Test": {
+  "title_1": "Reklamy Premium, Strony Internetowe i Projekty",
+  "content_1": "Dostarczamy reklamy, strony internetowe i projekty, które naprawdę konwertują.",
+  
+  "title_2": "Zarządzane Kampanie Reklamowe",
+  "content_2": "Zarządzamy Twoimi reklamami Google, Instagram i Facebook, aby przynosiły Ci kwalifikowanych klientów, a nie tylko wyświetlenia.",
+  
+  "title_3": "Najwyższa Jakość w Przystępnych Cenach",
+  "content_3": "Wszystko to w najwyższej jakości, przystępnych cenach, ponieważ skuteczny marketing nie powinien kosztować fortuny."
+},
+"HeaderOfDeffrent": {
+  "header": "OK... Ale Co Nas Wyróżnia?"
+},
+"DeffrentCards": {
+  "title_1": "Wygrywamy, Gdy Ty Wygrywasz",
+  "content_1": "Traktuj nas jako swojego dedykowanego i innowacyjnego partnera marketingowego, a nie kolejnego dostawcę. Twoje sukcesy traktujemy osobiście i dążymy do trwałych rezultatów.",
+
+  "title_2": "Jesteśmy w Polsce, Gotowi Pomóc",
+  "content_2": "To nie call center. To nie outsourcing. Jesteśmy prawdziwi, lokalni i gotowi spotkać się z Tobą osobiście, jeśli tego potrzebujesz.",
+
+  "title_3": "Skupieni na Tym, Co Ważne",
+  "content_3": "Jesteśmy doświadczonymi, zaufanymi specjalistami. Współpracując z branżami, które dobrze rozumiemy, możemy pewnie obiecać realne, mierzalne i trwałe wyniki."
+},
+
+
   "HomePage": {
     "title": "cadsjh!",
     "about": "Guxucbbbb"
