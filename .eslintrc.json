@@ -4,9 +4,5 @@
     "@typescript-eslint/no-explicit-any": "error",
     "no-unused-vars": "off", // Disable the rule for unused variables
     "no-undef": "off" // Disable the rule for undefined variables
-  },
-  "compilerOptions": {
-        "strict": true,
-        "useUnknownInCatchVariables": false
-    }
+  }
 }

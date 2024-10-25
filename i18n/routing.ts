@@ -7,9 +7,9 @@ export const routing = defineRouting({
   defaultLocale: 'en',
   pathnames: {
     '/': '/',
-    '/pathnames': {
-      en: '/pathnames',
-      pl: '/pathnames'
+    '/contact': {
+      en: '/contact', // English path for the contact page
+      pl: '/kontakt' // Polish path for the contact page (change as needed)
     }
   }
 });
