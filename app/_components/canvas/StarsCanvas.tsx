@@ -1,6 +1,7 @@
 import React, { useState, useRef, Suspense, HTMLProps } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
+import * as THREE from 'three';
 import * as random from "maath/random/dist/maath-random.esm";
 
 // Define a Props interface if you expect to receive additional props
