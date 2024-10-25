@@ -1,15 +1,20 @@
-import React, { useState, useRef, Suspense } from "react";
+import React, { useState, useRef, Suspense, HTMLProps } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Points, PointMaterial, Preload } from "@react-three/drei";
 import * as random from "maath/random/dist/maath-random.esm";
 
-const Stars = (props) => {
-  const ref = useRef();
+// Define a Props interface if you expect to receive additional props
+type StarsProps = HTMLProps<JSX.IntrinsicElements['group']>
+
+const Stars: React.FC<StarsProps> = (props) => {
+  const ref = useRef<THREE.Points>(null);
   const [sphere] = useState(() => random.inSphere(new Float32Array(5000), { radius: 1.2 }));
 
   useFrame((state, delta) => {
-    ref.current.rotation.x -= delta / 10;
-    ref.current.rotation.y -= delta / 15;
+    if (ref.current) {
+      ref.current.rotation.x -= delta / 10;
+      ref.current.rotation.y -= delta / 15;
+    }
   });
 
   return (
@@ -27,14 +32,13 @@ const Stars = (props) => {
   );
 };
 
-const StarsCanvas = () => {
+const StarsCanvas: React.FC = () => {
   return (
     <div className="w-full min-h-screen absolute inset-0 z-[1]">
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />
         </Suspense>
-
         <Preload all />
       </Canvas>
     </div>
