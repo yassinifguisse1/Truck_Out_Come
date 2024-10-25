@@ -14,7 +14,6 @@ export async function sendEmail(formData: z.infer<typeof contactFormSchema>) {
 
   try {
     const validatedData = contactFormSchema.parse(formData);
-    console.log("Form Data:", validatedData);
     const emailData = {
       from: `Contact Form <onboarding@resend.dev>`, // Sender email
       to: `yassinifguisse100@gmail.com`, // Recipient email
@@ -33,9 +32,9 @@ export async function sendEmail(formData: z.infer<typeof contactFormSchema>) {
 
     return { status: 'success', result };
   } catch (error) {
-    console.error('Error sending email:', error);
-    console.error('Error sending email:', error.response?.data || error.message);
-
-    return { status: 'error', error: error.message };
+    // console.error('Error sending email:', error);
+    // console.error('Error sending email:', error.response?.data || error.message);
+    const msg = (error as Error).message;
+    return { status: 'error', error: msg };
   }
 }

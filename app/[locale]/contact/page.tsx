@@ -55,11 +55,11 @@ export default function ContactPage() {
   const ServiceHolder = tPlaceHolder("Servece");
   const MessageHolder = tPlaceHolder("Message");
 
-  const t = useTranslations("errors"); // Assuming "contact" is the namespace for your translations
-  const formSchema = contactFormSchema(t);
+  // const t = useTranslations("errors"); // Assuming "contact" is the namespace for your translations
+  // const formSchema = contactFormSchema(t);
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof contactFormSchema>>({
+    resolver: zodResolver(contactFormSchema),
     defaultValues: {
       email: "",
       phone: "",
@@ -70,7 +70,7 @@ export default function ContactPage() {
 
   
 
-  const onSubmit = async (formData: z.infer<typeof formSchema>) => {
+  const onSubmit = async (formData: z.infer<typeof contactFormSchema>) => {
     setLoading(true);
 
     try {
