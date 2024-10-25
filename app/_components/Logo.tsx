@@ -1,7 +1,6 @@
 import React from "react";
 import { Rocket } from "lucide-react";
-import Link from "next/link";
-import Image from "next/image";
+
 
 const Logo = () => {
   return (
@@ -14,13 +13,7 @@ const Logo = () => {
              |OutCome
           </span>
         </span>
-        {/* <Image 
-        src="/tracklogo.png"
-        alt="Logo"
-        width={150}
-        height={150}
-        /> */}
-      {/* </Link> */}
+       
     </div>
   );
 };
