@@ -6,5 +6,9 @@
     "no-undef": "off", // Disable the rule for undefined variables
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off"
+  },
+  "compilerOptions": {
+    "downlevelIteration": true
+    // ... other options
   }
 }
