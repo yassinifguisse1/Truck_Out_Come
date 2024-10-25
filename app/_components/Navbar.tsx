@@ -8,7 +8,7 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import LocalSwitcher from "@/app/_components/local-switcher";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { Link } from "@/i18n/routing";
+import { Link, Pathnames } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import Logo from "./Logo";
 
@@ -16,7 +16,7 @@ import Logo from "./Logo";
 
 type NavbarItemType = {
   labe: string;
-  link: string;
+  link: Pathnames;
   clickCallback?: () => void;
 };
 
@@ -54,8 +54,8 @@ export default function Navbar() {
     setDarkTheme(!darkTheme)
 
   const items = [
-    { label: t("home"), link: "/" },
-    { label: t("freeMarketingAnalysis"), link: "/contact" },
+    { label: t("home"), link: "/"  as Pathnames},
+    { label: t("freeMarketingAnalysis"), link: "/contact"  as Pathnames},
   ];
  
   return (
