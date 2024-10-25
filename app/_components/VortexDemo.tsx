@@ -27,7 +27,7 @@ export function VortexDemo() {
           {thirdLine}
         </h3>
         <Link href="/contact">
-          <Button className="text-lg bg-white text-black font-mono mt-10">{button}</Button>
+          <Button className="text-lg hover:bg-white bg-white text-black font-mono mt-10">{button}</Button>
         </Link>
       </Vortex>
     </div>

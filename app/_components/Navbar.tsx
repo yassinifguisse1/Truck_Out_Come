@@ -55,8 +55,7 @@ export default function Navbar() {
 
   const items = [
     { label: t("home"), link: "/" },
-    { label: t("freeMarketingAnalysis"), link: "/about" },
-    { label: t("contactUs"), link: "/contact" },
+    { label: t("freeMarketingAnalysis"), link: "/contact" },
   ];
  
   return (

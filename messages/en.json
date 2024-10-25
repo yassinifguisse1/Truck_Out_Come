@@ -66,6 +66,31 @@
     "contactUs" : "contact",
     "lastLine":" All Rights Reserved."
   },
+  "Contact":{
+    "firstLine": "Receive a free marketing Analysis",
+    "secondLine": "Fill out the form below and we contact you within 48 hours for a free analysis.",
+    "thirdLine": "No cost , No obligation , No annoying sales pitch.Guaranteed."
+  },
+  "Form":{
+    "Email":"Email",
+    "Phone":"Phone",
+    "Service Interested In":"Service Interested In",
+    "Message":"Message",
+    "sendButton":"Send Message",
+    "sengingButton" : "Sending..."
+  },
+   "PlaceHolder":{
+    "Email":"example@example.com",
+    "Phone":"123456789",
+    "Message" : "Tell us about your project...",
+    "Servece":"Select a service"
+
+   },
+   "errors":{
+    "Email_Error":"Invalid email address",
+    "Message_Error":"Message must be at least 10 characters long",
+    "Service_Error":"Please select a service"
+ },
   "HomePage": {
     "title": "Hello world!",
     "about": "Go to the about page"

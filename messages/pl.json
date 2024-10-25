@@ -63,6 +63,30 @@
   "contactUs": "Kontakt",
   "lastLine": "Wszelkie Prawa Zastrzeżone."
 },
+"Contact": {
+  "firstLine": "Otrzymaj darmową analizę marketingową",
+  "secondLine": "Wypełnij formularz poniżej, a skontaktujemy się z Tobą w ciągu 48 godzin w celu bezpłatnej analizy.",
+  "thirdLine": "Bez kosztów, bez zobowiązań, bez irytujących ofert sprzedaży. Gwarantowane."
+},
+"Form": {
+  "Email": "E-mail",
+  "Phone": "Telefon",
+  "Service Interested In": "Usługa, którą jesteś zainteresowany",
+  "Message": "Wiadomość",
+  "sendButton": "Wyślij wiadomość",
+  "sengingButton": "Wysyłanie..."
+},
+"PlaceHolder": {
+  "Email": "przyklad@przyklad.com",
+  "Phone": "123456789",
+  "Message": "Opowiedz nam o swoim projekcie...",
+  "Servece": "Wybierz usługę"
+},
+"errors": {
+  "Email_Error": "Nieprawidłowy adres e-mail",
+  "Message_Error": "Wiadomość musi mieć co najmniej 10 znaków",
+  "Service_Error": "Proszę wybrać usługę"
+},
   "HomePage": {
     "title": "cadsjh!",
     "about": "Guxucbbbb"

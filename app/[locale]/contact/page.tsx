@@ -14,11 +14,11 @@ import { motion } from "framer-motion";
 import { sendEmail } from "@/app/_actions/sendEmail";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useState } from "react";
+import {  useState } from "react";
 import { contactFormSchema } from "@/lib/contactValidation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import {  z } from "zod";
 import {
   Form,
   FormControl,
@@ -30,11 +30,36 @@ import {
 import EarthCanvas from "@/app/_components/canvas/EarthCanvas";
 import StarsCanvas from "@/app/_components/canvas/StarsCanvas";
 import ContactInfo from "@/app/_components/contact/ContactInfo";
+import { useTranslations } from "next-intl";
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
 
-  const form = useForm<z.infer<typeof contactFormSchema>>({
-    resolver: zodResolver(contactFormSchema),
+  const tContact = useTranslations("Contact");
+  const tForm = useTranslations("Form");
+  const tPlaceHolder = useTranslations("PlaceHolder");
+  // const tErrors = useTranslations("errors");
+
+  const firstLine = tContact("firstLine");
+  const secondLine = tContact("secondLine");
+  const thirdLine = tContact("thirdLine");
+
+  const tranEmail = tForm("Email");
+  const tranPhone = tForm("Phone");
+  const tranService = tForm("Service Interested In");
+  const tranMessage = tForm("Message");
+  const tranButton = tForm("sendButton");
+  const tranSending = tForm("sengingButton");
+
+  const EmailHolder = tPlaceHolder("Email");
+  const PhoneHolder = tPlaceHolder("Phone");
+  const ServiceHolder = tPlaceHolder("Servece");
+  const MessageHolder = tPlaceHolder("Message");
+
+  const t = useTranslations("errors"); // Assuming "contact" is the namespace for your translations
+  const formSchema = contactFormSchema(t);
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
     defaultValues: {
       email: "",
       phone: "",
@@ -43,7 +68,9 @@ export default function ContactPage() {
     },
   });
 
-  const onSubmit = async (formData: z.infer<typeof contactFormSchema>) => {
+  
+
+  const onSubmit = async (formData: z.infer<typeof formSchema>) => {
     setLoading(true);
 
     try {
@@ -61,7 +88,6 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen py-24 px-4 sm:px-6 lg:px-8 bg-[#050816] relative">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-12 mt-10 container mx-auto">
-
         {/* Form  */}
         <motion.div
           initial={{ opacity: 0, y: 100 }}
@@ -75,16 +101,15 @@ export default function ContactPage() {
         >
           <div className="px-6 py-8">
             <h2 className="text-3xl font-bold text-center font-mono mb-8">
-              Receive a free marketing Analysis
+              {firstLine}
             </h2>
             <h2 className="text-md md:text-lg text-center font-mono pb-8">
-              Fill out the form below and we contact you within 48 hours for a
-              free analysis.
+              {secondLine}
             </h2>
             <p className="text-sm md:text-md text-muted-foreground text-center font-mono  pb-8">
-              No cost , No obligation , No annoying sales pitch.Guaranteed.
+              {thirdLine}
             </p>
-            <ContactInfo/>
+            <ContactInfo />
             <Form {...form}>
               <form
                 className="space-y-6"
@@ -96,9 +121,13 @@ export default function ContactPage() {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel>{tranEmail}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Email..." {...field} className='dark:bg-violet-950 bg-slate-300'/>
+                          <Input
+                            placeholder={EmailHolder}
+                            {...field}
+                            className="dark:bg-violet-950 bg-slate-300"
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -111,9 +140,13 @@ export default function ContactPage() {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Phone</FormLabel>
+                        <FormLabel>{tranPhone}</FormLabel>
                         <FormControl>
-                          <Input placeholder="Phone..." {...field} className='dark:bg-violet-950 bg-slate-300'/>
+                          <Input
+                            placeholder={PhoneHolder}
+                            {...field}
+                            className="dark:bg-violet-950 bg-slate-300"
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -126,16 +159,16 @@ export default function ContactPage() {
                     name="service"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Service Interested In</FormLabel>
-                        <FormControl >
+                        <FormLabel>{tranService}</FormLabel>
+                        <FormControl>
                           <Select
                             onValueChange={field.onChange}
                             value={field.value}
                           >
-                            <SelectTrigger className='dark:bg-violet-950 bg-slate-300'>
-                              <SelectValue placeholder="Select a service"/>
+                            <SelectTrigger className="dark:bg-violet-950 bg-slate-300">
+                              <SelectValue placeholder={ServiceHolder} />
                             </SelectTrigger>
-                            <SelectContent className='dark:bg-violet-950'>
+                            <SelectContent className="dark:bg-violet-950">
                               <SelectItem value="web-design">
                                 Web Design
                               </SelectItem>
@@ -160,13 +193,13 @@ export default function ContactPage() {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Message</FormLabel>
+                        <FormLabel>{tranMessage}</FormLabel>
                         <FormControl>
                           <Textarea
                             id="message"
-                            placeholder="Tell us about your project..."
+                            placeholder={MessageHolder}
                             {...field}
-                            className='dark:bg-violet-950 bg-slate-300'
+                            className="dark:bg-violet-950 bg-slate-300"
                           />
                         </FormControl>
                         <FormMessage />
@@ -175,7 +208,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <Button type="submit" className="w-full" disabled={loading}>
-                  {loading ? "Sending..." : "Send Message"}
+                  {loading ? `${tranSending} ` : `${tranButton}`}
                 </Button>
               </form>
             </Form>
@@ -191,16 +224,16 @@ export default function ContactPage() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="w-full lg:w-full h-[400px] lg:h-[600px] rounded-lg overflow-hidden shadow-lg relative z-[2] ">
-           <EarthCanvas />
+          className="w-full lg:w-full h-[400px] lg:h-[600px] rounded-lg overflow-hidden shadow-lg relative z-[2] "
+        >
+          <EarthCanvas />
         </motion.div>
 
         {/* Stars */}
-        
       </div>
       <div className="absolute inset-0 w-full h-full">
-          <StarsCanvas />
-        </div>
+        <StarsCanvas />
+      </div>
       <ToastContainer />
     </div>
   );
