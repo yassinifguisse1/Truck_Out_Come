@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   title: "TrackOutCome",
   description: "",
   icons: {
-    icon: "/rocketv2.PNG", // You can also specify additional sizes, e.g., `"/favicon-32x32.png"`
-    shortcut: "/favicon.ico",
+    icon: "/rocketv2.png", 
+    apple: "/rocketv2.png",
   },
 };
 interface RootLayoutProps {
