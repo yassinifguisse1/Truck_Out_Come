@@ -42,6 +42,8 @@ export default function ContactPage() {
   const firstLine = tContact("firstLine");
   const secondLine = tContact("secondLine");
   const thirdLine = tContact("thirdLine");
+  const lastLine = tContact("lastLine");
+
 
   const tranEmail = tForm("Email");
   const tranPhone = tForm("Phone");
@@ -55,15 +57,16 @@ export default function ContactPage() {
   const ServiceHolder = tPlaceHolder("Servece");
   const MessageHolder = tPlaceHolder("Message");
 
-  // const t = useTranslations("errors"); // Assuming "contact" is the namespace for your translations
-  // const formSchema = contactFormSchema(t);
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
+      name:"",
       email: "",
+      company:"",
       phone: "",
       service: "",
+      spending:"",
       message: "",
     },
   });
@@ -104,8 +107,13 @@ export default function ContactPage() {
               {firstLine}
             </h2>
             <h2 className="text-md md:text-lg text-center font-mono pb-8">
+              {lastLine}
+            </h2>
+
+            <h2 className="text-md md:text-lg text-center font-mono pb-8">
               {secondLine}
             </h2>
+            
             <p className="text-sm md:text-md text-muted-foreground text-center font-mono  pb-8">
               {thirdLine}
             </p>
@@ -115,6 +123,27 @@ export default function ContactPage() {
                 className="space-y-6"
                 onSubmit={form.handleSubmit(onSubmit)} // Update form submit handler
               >
+
+              <div className="space-y-2 ">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Full Name"
+                            {...field}
+                            className="dark:bg-violet-950 bg-slate-300"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+                
                 <div className="space-y-2 ">
                   <FormField
                     control={form.control}
@@ -134,6 +163,27 @@ export default function ContactPage() {
                     )}
                   />
                 </div>
+
+                <div className="space-y-2 ">
+                  <FormField
+                    control={form.control}
+                    name="company"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>Company Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Company Name"
+                            {...field}
+                            className="dark:bg-violet-950 bg-slate-300"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
                 <div className="space-y-2">
                   <FormField
                     control={form.control}
@@ -179,6 +229,9 @@ export default function ContactPage() {
                               <SelectItem value="consulting">
                                 Consulting
                               </SelectItem>
+                              <SelectItem value="Ad-creation-and-managment">
+                                Ad creation and managment 
+                              </SelectItem>
                             </SelectContent>
                           </Select>
                         </FormControl>
@@ -187,6 +240,28 @@ export default function ContactPage() {
                     )}
                   />
                 </div>
+                
+                <div className="space-y-2 ">
+                  <FormField
+                    control={form.control}
+                    name="spending"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>How much are you spending on advertisong per month?</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Amount..."
+                            {...field}
+                            className="dark:bg-violet-950 bg-slate-300"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+             
+                
                 <div className="space-y-2">
                   <FormField
                     control={form.control}
@@ -207,6 +282,10 @@ export default function ContactPage() {
                     )}
                   />
                 </div>
+
+
+
+
                 <Button type="submit" className="w-full" disabled={loading}>
                   {loading ? `${tranSending} ` : `${tranButton}`}
                 </Button>

@@ -48,7 +48,7 @@
   },
   "DeffrentCards":{
     "title_1": "We Win When You Win",
-    "content_1": "Think of us as your dedicated and innovative marketing partner, not just another vendor. We take your success personally and strive for lasting results.",
+    "content_1": "Think of us as your dedicated and innovative marketing partner, not just another supplier. We take your success personally and strive for lasting results.",
     
     "title_2": "We're Here in Poland, Ready to Help",
     "content_2": "Not a call center. Not outsourced. We're real, local, and ready to sit down and discuss your needs face-to-face if that's what you want.",
@@ -69,13 +69,14 @@
   "Contact":{
     "firstLine": "Receive a free marketing Analysis",
     "secondLine": "Fill out the form below and we contact you within 48 hours for a free analysis.",
-    "thirdLine": "No cost , No obligation , No annoying sales pitch.Guaranteed."
+    "thirdLine": "No cost , No obligation , No annoying sales pitch.Guaranteed.",
+    "lastLine": "would like to know what we can do for you ?"
   },
   "Form":{
     "Email":"Email",
     "Phone":"Phone",
     "Service Interested In":"Service Interested In",
-    "Message":"Message",
+    "Message":"What is your most importent question",
     "sendButton":"Send Message",
     "sengingButton" : "Sending..."
   },

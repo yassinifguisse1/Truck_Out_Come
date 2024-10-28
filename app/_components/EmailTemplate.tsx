@@ -11,16 +11,22 @@ import {
   } from "@react-email/components";
   
   interface EmailTemplateProps {
+    name: string;
     email: string;
+    company:string;
     service: string;
     message: string;
+    spending:string;
     phone?:string;
   }
   
   const EmailTemplate = ({
+    name,
     email,
+    company,
     service,
     message,
+    spending,
     phone
   }: EmailTemplateProps) => (
     <Html>
@@ -32,8 +38,14 @@ import {
             <Text>
             Thank you for reaching out! Here are the details of your message:
           </Text>
+             <Text>
+                <strong>Name:</strong> {name}
+              </Text>
               <Text>
                 <strong>Email:</strong> {email}
+              </Text>
+              <Text>
+                <strong>Company Name:</strong> {company}
               </Text>
               <Text>
                 <strong>Service:</strong> {service}
@@ -42,7 +54,10 @@ import {
                 <strong>phone:</strong> {phone}
               </Text>
               <Text>
-                <strong>Message:</strong>
+                <strong>Add budget per month:</strong> {spending}
+              </Text>
+              <Text>
+                <strong>importent question:</strong>
               </Text>
               <Text>{message}</Text>
 

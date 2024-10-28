@@ -66,7 +66,9 @@
 "Contact": {
   "firstLine": "Otrzymaj darmową analizę marketingową",
   "secondLine": "Wypełnij formularz poniżej, a skontaktujemy się z Tobą w ciągu 48 godzin w celu bezpłatnej analizy.",
-  "thirdLine": "Bez kosztów, bez zobowiązań, bez irytujących ofert sprzedaży. Gwarantowane."
+  "thirdLine": "Bez kosztów, bez zobowiązań, bez irytujących ofert sprzedaży. Gwarantowane.",
+  "lastLine": "Chciałbyś wiedzieć, co możemy dla Ciebie zrobić?"
+
 },
 "Form": {
   "Email": "E-mail",

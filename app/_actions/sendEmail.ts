@@ -5,8 +5,7 @@ import EmailTemplate from '../_components/EmailTemplate'; // Adjust the path as 
 import React from 'react';
 import { z } from 'zod';
 
-const resend = new Resend(process.env.RESEND_API_KEY); // Replace with your API key
-console.log('API Key:', process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(formData: z.infer<typeof contactFormSchema>) {
 
@@ -20,20 +19,21 @@ export async function sendEmail(formData: z.infer<typeof contactFormSchema>) {
       subject: `New message from ${validatedData.email}`,
       Reply_to: validatedData.email as string,
       react: React.createElement(EmailTemplate, {
-        email: validatedData.email,
-        service: validatedData.service,
-        phone: validatedData.phone ?? "",
-        message: validatedData.message,
+        name:validatedData.name ,
+        email: validatedData.email as string,
+        company:validatedData.company ?? "",
+        service: validatedData.service as string,
+        phone: validatedData.phone ?? "" as string,
+        spending:validatedData.spending ?? "" as string,
+        message: validatedData.message as string,
       }),
     };
 
     const result = await resend.emails.send(emailData);
-    console.log('Email sending result:', result); // Add this line
 
     return { status: 'success', result };
   } catch (error) {
-    // console.error('Error sending email:', error);
-    // console.error('Error sending email:', error.response?.data || error.message);
+
     const msg = (error as Error).message;
     return { status: 'error', error: msg };
   }
