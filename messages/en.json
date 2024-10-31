@@ -73,17 +73,23 @@
     "lastLine": "would like to know what we can do for you ?"
   },
   "Form":{
+    "Name":"Name",
     "Email":"Email",
+    "Company":"Company Name",
     "Phone":"Phone",
     "Service Interested In":"Service Interested In",
+    "Amount":"How much are you spending on advertisong per month?",
     "Message":"What is your most importent question",
     "sendButton":"Send Message",
     "sengingButton" : "Sending..."
   },
    "PlaceHolder":{
+    "Name":"Full Name",
     "Email":"example@example.com",
     "Phone":"123456789",
+    "Company":"Company Name",
     "Message" : "Tell us about your project...",
+    "Amount":"Amount...",
     "Servece":"Select a service"
 
    },

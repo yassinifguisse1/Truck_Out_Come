@@ -14,9 +14,9 @@ export async function sendEmail(formData: z.infer<typeof contactFormSchema>) {
   try {
     const validatedData = contactFormSchema.parse(formData);
     const emailData = {
-      from: `Contact Form <onboarding@resend.dev>`, // Sender email
-      to: `yassinifguisse100@gmail.com`, // Recipient email
-      subject: `New message from ${validatedData.email}`,
+      from: `Contact Form <info@trackoutcome.agency>`, // Sender email
+      to: `info@trackoutcome.agency`, // Recipient email
+      subject: `New message from ${validatedData.name}`,
       Reply_to: validatedData.email as string,
       react: React.createElement(EmailTemplate, {
         name:validatedData.name ,

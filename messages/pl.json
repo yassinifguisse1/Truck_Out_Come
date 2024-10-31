@@ -71,17 +71,23 @@
 
 },
 "Form": {
+  "Name": "Imię",
   "Email": "E-mail",
+  "Company": "Nazwa Firmy",
   "Phone": "Telefon",
   "Service Interested In": "Usługa, którą jesteś zainteresowany",
+  "Amount": "Ile wydajesz na reklamę miesięcznie?",
   "Message": "Wiadomość",
   "sendButton": "Wyślij wiadomość",
   "sengingButton": "Wysyłanie..."
 },
 "PlaceHolder": {
+  "Name": "Pełne Imię",
   "Email": "przyklad@przyklad.com",
+  "Company": "Nazwa Firmy",
   "Phone": "123456789",
   "Message": "Opowiedz nam o swoim projekcie...",
+  "Amount": "Kwota...",
   "Servece": "Wybierz usługę"
 },
 "errors": {

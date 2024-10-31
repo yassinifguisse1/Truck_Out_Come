@@ -37,25 +37,29 @@ export default function ContactPage() {
   const tContact = useTranslations("Contact");
   const tForm = useTranslations("Form");
   const tPlaceHolder = useTranslations("PlaceHolder");
-  // const tErrors = useTranslations("errors");
 
   const firstLine = tContact("firstLine");
   const secondLine = tContact("secondLine");
   const thirdLine = tContact("thirdLine");
   const lastLine = tContact("lastLine");
 
-
+  const tranName = tForm("Name");
   const tranEmail = tForm("Email");
+  const tranCompany = tForm("Company");
   const tranPhone = tForm("Phone");
   const tranService = tForm("Service Interested In");
+  const tranAmount = tForm("Amount");
   const tranMessage = tForm("Message");
   const tranButton = tForm("sendButton");
   const tranSending = tForm("sengingButton");
 
+  const NameHolder = tPlaceHolder("Name");
   const EmailHolder = tPlaceHolder("Email");
+  const CompanyHolder = tPlaceHolder("Company");
   const PhoneHolder = tPlaceHolder("Phone");
   const ServiceHolder = tPlaceHolder("Servece");
   const MessageHolder = tPlaceHolder("Message");
+  const AmountHolder = tPlaceHolder("Amount");
 
 
   const form = useForm<z.infer<typeof contactFormSchema>>({
@@ -130,10 +134,10 @@ export default function ContactPage() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Name</FormLabel>
+                        <FormLabel>{tranName}</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Full Name"
+                            placeholder={NameHolder}
                             {...field}
                             className="dark:bg-violet-950 bg-slate-300"
                           />
@@ -170,10 +174,10 @@ export default function ContactPage() {
                     name="company"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Company Name</FormLabel>
+                        <FormLabel>{tranCompany}</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Company Name"
+                            placeholder={CompanyHolder}
                             {...field}
                             className="dark:bg-violet-950 bg-slate-300"
                           />
@@ -247,10 +251,10 @@ export default function ContactPage() {
                     name="spending"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>How much are you spending on advertisong per month?</FormLabel>
+                        <FormLabel>{tranAmount}</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Amount..."
+                            placeholder={AmountHolder}
                             {...field}
                             className="dark:bg-violet-950 bg-slate-300"
                           />
