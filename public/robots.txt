@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://trackoutcome.agency
+
+# Sitemaps
+Sitemap: https://trackoutcome.agency/sitemap.xml
