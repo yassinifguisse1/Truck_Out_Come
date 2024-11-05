@@ -21,10 +21,10 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "TrackOutCome",
-  description: "",
+  description: "We design high-performance websites and drive targeted clients to your business. Grow your brand online with our expert web solutions and lead generation services.",
   icons: {
-    icon: "/rocketv2.png", 
-    apple: "/rocketv2.png",
+    icon: "/rocketv2.png",
+    apple: "/favicon.ico",
   },
 };
 interface RootLayoutProps {
